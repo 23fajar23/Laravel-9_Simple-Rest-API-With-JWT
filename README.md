@@ -1,64 +1,75 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
-
 <p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+
+<img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"> 
+    
+## ✨ ~ Simple Rest API with JWT authentication  ~ ✨
+
 </p>
 
-## About Laravel
+✨ 👋 Hi Everyone 👋 ✨
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Here I will share a Laravel project, where this project only contains the REST API. This project is suitable for those of you who want to start learning the backend or creating a REST API in Laravel. I use Laravel 9 in this project where we will use a token to carry out the authentication process.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Step after your clone this project :
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+-   copy file .env.example and rename to .env
+-   create new database with name "laravel"
+-   open terminal and go to directory project
+-   then run command "composer install"
+-   run command "php artisan migrate:refresh --seed"
+-   final step you can run command "php artisan serve" for run this project
 
-## Learning Laravel
+## Authentication Register :
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+> You must register first if you don't have an account, just enter your email and password.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+    Email => tokoweb@gmail.com
+    Password => tokoweb
 
-## Laravel Sponsors
+## Authentication Login :
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+> If you already have an account, you can just log in directly by entering a valid email and password.
 
-### Premium Partners
+    Email => tokoweb@gmail.com
+    Password => tokoweb
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+> Then you will get a response containing your data along with a token that you can use to access the data on the rest API later. (example)
 
-## Contributing
+    {
+        "status": "success",
+        "user": {
+            "id": 1,
+            "name": "",
+            "email": "tokoweb@gmail.com",
+            "email_verified_at": null,
+            "created_at": "2024-07-03T09:10:38.000000Z",
+            "updated_at": "2024-07-03T09:10:38.000000Z"
+        },
+        "authorization": {
+            "token": "eyJ0eXAivsr14frbzxJD3BJm1HIGZ4i-i0L6qccKM_XNvBuOjdU....",
+            "type": "bearer"
+        }
+    }
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Documentation :
 
-## Code of Conduct
+You can use the token you have obtained to access various APIs that have been provided. If you want to try various other APIs, you can visit my POSTMAN documentation link below :
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+    https://www.postman.com/universal-equinox-683971/workspace/fajar-workspace/globals
 
-## Security Vulnerabilities
+## Step after your visit link postman :
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+-   open the Collections section then register first then log in
+-   After that you can test other rest apis, because the token after we log in has been stored in the global environment so we don't need to enter a token every time we want to test another rest api.
 
-## License
+<br>
+In this project I have also provided some dummy data in the seeder section in Laravel. Those are some previews of what this project is like, hopefully this project can help you. 😄🙏✨<br>
+See you next time.. ✌✌
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<br> 
+#PHP
+#MySql
+#Laravel9 
+#REST API
+#CRUD
+#SimpleProject
